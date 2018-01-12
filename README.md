@@ -2,7 +2,7 @@
 
 | Bintray | Appveyor | Travis |
 |---------|-----------|--------|
-|BINTRAY_BADGE_URL|APPVEYOR_BADGE_URL|TRAVIS_BADGE_URL|
+|[ ![Download](https://api.bintray.com/packages/bincrafters/public-conan/jansson%3Abincrafters/images/download.svg?version=2.10%3Astable) ](https://bintray.com/bincrafters/public-conan/jansson%3Abincrafters/2.10%3Astable/link)|[![Build status](https://ci.appveyor.com/api/projects/status/ciwx9rgeci1cywpr/branch/stable/2.10?svg=true)](https://ci.appveyor.com/project/BinCrafters/conan-jansson/branch/stable/2.10)|[![Build Status](https://travis-ci.org/bincrafters/conan-jansson.svg?branch=stable%2F2.10)](https://travis-ci.org/bincrafters/conan-jansson)|
 
 ## Conan.io Information
 
