@@ -30,11 +30,6 @@ class JanssonConan(ConanFile):
         extracted_dir = self.name + "-" + self.version
         os.rename(extracted_dir, self.source_subfolder)
 
-        sources_cmake = os.path.join(self.source_subfolder, "CMakeLists.txt")
-        sources_cmake_orig = os.path.join(self.source_subfolder, "CMakeListsOriginal.txt")
-        os.rename(sources_cmake, sources_cmake_orig)
-        os.rename("CMakeLists.txt", sources_cmake)
-
 
     def build(self):
         cmake = CMake(self)
@@ -50,7 +45,7 @@ class JanssonConan(ConanFile):
             if self.settings.compiler.runtime == "MT" or self.settings.compiler.runtime == "MTd":
                 cmake.definitions["JANSSON_STATIC_CRT"] = True
 
-        cmake.configure(source_folder=self.source_subfolder,build_folder=self.build_subfolder)
+        cmake.configure(build_folder=self.build_subfolder)
         cmake.build()
         cmake.install()
 

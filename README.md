@@ -1,7 +1,7 @@
 ## Package Status
 
-| Bintray | Appveyor | Travis |
-|---------|-----------|--------|
+| Bintray | Windows | Linux & macOS | 
+|:--------:|:---------:|:-----------------:|
 |[ ![Download](https://api.bintray.com/packages/bincrafters/public-conan/jansson%3Abincrafters/images/download.svg?version=2.10%3Astable) ](https://bintray.com/bincrafters/public-conan/jansson%3Abincrafters/2.10%3Astable/link)|[![Build status](https://ci.appveyor.com/api/projects/status/ciwx9rgeci1cywpr/branch/stable/2.10?svg=true)](https://ci.appveyor.com/project/BinCrafters/conan-jansson/branch/stable/2.10)|[![Build Status](https://travis-ci.org/bincrafters/conan-jansson.svg?branch=stable%2F2.10)](https://travis-ci.org/bincrafters/conan-jansson)|
 
 ## Conan.io Information
@@ -39,9 +39,7 @@ The contents of this GIT repository are completely separate from the software be
     ~/.conan/data/<pkg_name>/<pkg_version>/bincrafters/package/<random_package_id>/license/<LICENSE_FILES_HERE>
 
 *Note :   The most common filenames for OSS licenses are `LICENSE` AND `COPYING` without file extensions.*
-	
+
 ### License for Bincrafters recipe:
 
     ~/.conan/data/<pkg_name>/<pkg_version>/bincrafters/export/LICENSE.md
-
-	
