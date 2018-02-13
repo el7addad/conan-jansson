@@ -7,7 +7,7 @@ import os
 
 class JanssonConan(ConanFile):
     name = "jansson"
-    version = "2.10"
+    version = "2.11"
     url = "https://github.com/bincrafters/conan-jansson"
     description = "C library for encoding, decoding and manipulating JSON data"
     license = "MIT"
