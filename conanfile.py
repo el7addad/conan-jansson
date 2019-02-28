@@ -48,6 +48,10 @@ class JanssonConan(ConanFile):
         cmake.definitions["JANSSON_WITHOUT_TESTS"] = False
         cmake.definitions["USE_URANDOM"] = self.options.use_urandom
         cmake.definitions["USE_WINDOWS_CRYPTOAPI"] = self.options.use_windows_cryptoapi
+        
+        if self.settings.os == "Macos" and self.settings.compiler == "gcc":
+            cmake.definitions["CMAKE_C_COMPILER"] = "gcc-" + str(self.settings.compiler.version)
+            cmake.definitions["CMAKE_CXX_COMPILER"] = "g++-" + str(self.settings.compiler.version)
 
         if self.settings.compiler == "Visual Studio":
             if "MT" in self.settings.compiler.runtime:

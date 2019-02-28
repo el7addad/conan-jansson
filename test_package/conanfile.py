@@ -8,9 +8,16 @@ import os
 class TestPackageConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     generators = "cmake"
+    
+    def configure_cmake(self):
+        cmake = CMake(self)
+        if self.settings.os == "Macos" and self.settings.compiler == "gcc":
+            cmake.definitions["CMAKE_C_COMPILER"] = "gcc-" + str(self.settings.compiler.version)
+            cmake.definitions["CMAKE_CXX_COMPILER"] = "g++-" + str(self.settings.compiler.version)
+        return cmake
 
     def build(self):
-        cmake = CMake(self)
+        cmake = self.configure_cmake()
         cmake.configure()
         cmake.build()
 
