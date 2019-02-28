@@ -68,7 +68,7 @@ matrix:
           - BREW_GCC="brew update && brew install --verbose gcc@8 && CC=gcc-8 && CXX=g++-8"
           
 before_install:
-  - test $GCC_ON_MACOS && eval ${BREW_GCC}
+  - if ! test -z $GCC_ON_MACOS; then echo "Installing GCC..." && eval ${BREW_GCC}; fi
     
 install:
   - chmod +x .travis/install.sh
