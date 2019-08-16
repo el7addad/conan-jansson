@@ -12,10 +12,17 @@ matrix:
           
 before_install:
   - if ! test -z $GCC_ON_MACOS; then echo "Installing GCC..." && eval ${BREW_GCC}; fi
-  - sudo ln -s /usr/local/bin/gcc-8 /usr/local/bin/cc
-  - sudo ln -s /usr/local/bin/gcc-8 /usr/local/bin/gcc
-  - sudo ln -s /usr/local/bin/g++-8 /usr/local/bin/c++
-  - sudo ln -s /usr/local/bin/g++-8 /usr/local/bin/g++
+  - ls
+  - cd /usr/local/bin
+  - sudo rm -f cc gcc c++ g++
+  - sudo ln -s /usr/local/bin/gcc-8 cc
+  - sudo ln -s /usr/local/bin/gcc-8 gcc
+  - sudo ln -s /usr/local/bin/g++-8 c++
+  - sudo ln -s /usr/local/bin/g++-8 g++
+  - cd -
+  - ls
+  - gcc -v
+  - g++ -v
   
 install:
   - chmod +x .travis/install.sh
