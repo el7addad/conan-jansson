@@ -12,7 +12,7 @@ matrix:
           
 before_install:
   - if ! test -z $GCC_ON_MACOS; then echo "Installing GCC..." && eval ${BREW_GCC}; fi
-  - cd /usr/bin
+  - cd /usr/local/bin
   - sudo rm -f cc gcc c++ g++
   - sudo ln -s /usr/local/bin/gcc-8 cc
   - sudo ln -s /usr/local/bin/gcc-8 gcc
